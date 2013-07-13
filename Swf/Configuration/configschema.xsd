@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://blitzabeliter.recurity.com" xmlns="http://blitzabeliter.recurity.com" elementFormDefault="qualified" xmlns:bb="http://blitzabeliter.recurity.com">
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="AllowInvalidMethodNames" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AllowAVM2" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AbcRemoveMetadata" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AllowUnknownTagTypes" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RequireFileAttributes" minOccurs="1" maxOccurs="1" >
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AllowMultipleFileAttributes" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FixMultipleFileAttributes" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VersionMinimum" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger" default="1">
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VersionMaximum"  minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger" default="11">
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WriteCompressed" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" default="true">
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WriteCompressionLevel" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:positiveInteger" default="9">
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SWFFileParsingMethod" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="bb:SWFFileParsingMethod"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HandleTagOversize" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="bb:HandleTagOversize"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HandleStreamOversize" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="bb:HandleStreamOversize"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HandleHeadSizeIssue" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="bb:HandleHeadSizeIssue"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AVM1DeleteInvalidBytecode" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:boolean" default="true"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MinimumStageSizeX" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:unsignedInt"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MaximumStageSizeX" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value"  type="xs:unsignedInt"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MinimumStageSizeY" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="xs:unsignedInt"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MaximumStageSizeY" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value"  type="xs:unsignedInt"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HandleReservedBits" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="value" type="bb:HandleReservedBits"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TagHandlers"  minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="CSMTextSettings" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DebugID" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineShape" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineShape2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineShape3" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineShape4" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineBits" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineSceneAndFrameLabelData" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineScalingGrid" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineBinaryData" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineBitsJPEG2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineBitsJPEG3" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineBitsLossless" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineBitsLossless2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineMorphShape" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineMorphShape2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFont" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFont2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFont3" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFont4" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFontInfo" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFontInfo2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFontAlignZones" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineFontName" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineText" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineText2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineEditText" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineSound" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineButton" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineButton2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineButtonSound" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineVideoStream" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DefineSprite" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DoABC" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DoAction" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ScriptLimits" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DoInitAction" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ExportAssets" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="EnableDebugger" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="EnableDebugger2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FileAttributes" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FrameLabel" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ImportAssets" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ImportAssets2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="JPEGTables" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Metadata" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Protect" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ProductID" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PlaceObject" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PlaceObject2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PlaceObject3" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RemoveObject" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RemoveObject2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="StartSound" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="StartSound2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SoundStreamHead" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SoundStreamHead2" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SoundStreamBlock" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SetTabIndex" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SetBackgroundColor" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ShowFrame" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SymbolClass" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="VideoFrame" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:attribute name="value" type="xs:boolean" default="true"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="HandleTagOversize" >
+    <xs:restriction base="xs:string" >
+      <xs:enumeration value="RaisError"/>
+      <xs:enumeration value="ExpandStream"/>
+      <xs:enumeration value="ExpandStreamAndWipe"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SWFFileParsingMethod" >
+    <xs:restriction base="xs:string" >
+      <xs:enumeration value="Discontinuous"/>
+      <xs:enumeration value="Continuous"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HandleStreamOversize" >
+    <xs:restriction base="xs:string" >
+      <xs:enumeration value="RaisError"/>
+      <xs:enumeration value="Wipe"/>
+      <xs:enumeration value="Resize"/>
+      <xs:enumeration value="Ignore"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HandleHeadSizeIssue" >
+    <xs:restriction base="xs:string" >
+      <xs:enumeration value="RaisError"/>
+      <xs:enumeration value="Fix"/>
+      <xs:enumeration value="Ignore"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HandleReservedBits" >
+    <xs:restriction base="xs:string" >
+      <xs:enumeration value="RaisError"/>
+      <xs:enumeration value="Fix"/>
+      <xs:enumeration value="Ignore"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A84DEAA1-98AA-43FF-977D-68B4803586A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Recurity.Swf</RootNamespace>
+    <AssemblyName>Recurity.Swf</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="AdpcmMonoPacket.cs" />
+    <Compile Include="AdpcmPacket.cs" />
+    <Compile Include="AdpcmSoundData.cs" />
+    <Compile Include="AdpcmStereoPacket.cs" />
+    <Compile Include="AlphaBitmapData.cs" />
+    <Compile Include="AlphaColorMapData.cs" />
+    <Compile Include="Argb.cs" />
+    <Compile Include="AVM1Modifier\BuildingBlocks\AbstractBuildingBlock.cs" />
+    <Compile Include="AVM1Modifier\BuildingBlocks\ArgN.cs" />
+    <Compile Include="AVM1Modifier\BuildingBlocks\BeginsWith.cs" />
+    <Compile Include="AVM1Modifier\BuildingBlocks\ConditionalIfFalseExecOrig.cs" />
+    <Compile Include="AVM1Modifier\BuildingBlocks\GetVariable.cs" />
+    <Compile Include="AVM1Modifier\BuildingBlocks\SetVariable.cs" />
+    <Compile Include="AVM1Modifier\CheckMachine\Machine.cs" />
+    <Compile Include="AVM1Modifier\FSCommand.cs" />
+    <Compile Include="AVM1Modifier\Modification.cs" />
+    <Compile Include="AVM1Modifier\ModLib.cs" />
+    <Compile Include="AVM1Modifier\ModVariable.cs" />
+    <Compile Include="AVM1\AbstractAction.cs" />
+    <Compile Include="AVM1\AVM1Actions.cs" />
+    <Compile Include="AVM1\AVM1Code.cs" />
+    <Compile Include="AVM1\AVM1DataElement.cs" />
+    <Compile Include="AVM1\AVM1Exception.cs" />
+    <Compile Include="AVM1\AVM1ExceptionByteCodeFormat.cs" />
+    <Compile Include="AVM1\AVM1ExceptionSourceFormat.cs" />
+    <Compile Include="AVM1\AVM1ExceptionVersion.cs" />
+    <Compile Include="AVM1\AVM1Factory.cs" />
+    <Compile Include="AVM1\AVM1Function.cs" />
+    <Compile Include="AVM1\Instructions\ActionAdd.cs" />
+    <Compile Include="AVM1\Instructions\ActionAdd2.cs" />
+    <Compile Include="AVM1\Instructions\ActionAnd.cs" />
+    <Compile Include="AVM1\Instructions\ActionAsciiToChar.cs" />
+    <Compile Include="AVM1\Instructions\ActionBitAnd.cs" />
+    <Compile Include="AVM1\Instructions\ActionBitLShift.cs" />
+    <Compile Include="AVM1\Instructions\ActionBitOr.cs" />
+    <Compile Include="AVM1\Instructions\ActionBitRShift.cs" />
+    <Compile Include="AVM1\Instructions\ActionBitURShift.cs" />
+    <Compile Include="AVM1\Instructions\ActionBitXor.cs" />
+    <Compile Include="AVM1\Instructions\ActionCall.cs" />
+    <Compile Include="AVM1\Instructions\ActionCallFunction.cs" />
+    <Compile Include="AVM1\Instructions\ActionCallMethod.cs" />
+    <Compile Include="AVM1\Instructions\ActionCastOp.cs" />
+    <Compile Include="AVM1\Instructions\ActionCharToAscii.cs" />
+    <Compile Include="AVM1\Instructions\ActionCloneSprite.cs" />
+    <Compile Include="AVM1\Instructions\ActionConstantPool.cs" />
+    <Compile Include="AVM1\Instructions\ActionDecrement.cs" />
+    <Compile Include="AVM1\Instructions\ActionDefineFunction.cs" />
+    <Compile Include="AVM1\Instructions\ActionDefineFunction2.cs" />
+    <Compile Include="AVM1\Instructions\ActionDefineLocal.cs" />
+    <Compile Include="AVM1\Instructions\ActionDefineLocal2.cs" />
+    <Compile Include="AVM1\Instructions\ActionDelete.cs" />
+    <Compile Include="AVM1\Instructions\ActionDelete2.cs" />
+    <Compile Include="AVM1\Instructions\ActionDivide.cs" />
+    <Compile Include="AVM1\Instructions\ActionEnd.cs" />
+    <Compile Include="AVM1\Instructions\ActionEndDrag.cs" />
+    <Compile Include="AVM1\Instructions\ActionEnumerate.cs" />
+    <Compile Include="AVM1\Instructions\ActionEnumerate2.cs" />
+    <Compile Include="AVM1\Instructions\ActionEquals.cs" />
+    <Compile Include="AVM1\Instructions\ActionEquals2.cs" />
+    <Compile Include="AVM1\Instructions\ActionExtends.cs" />
+    <Compile Include="AVM1\Instructions\ActionGetMember.cs" />
+    <Compile Include="AVM1\Instructions\ActionGetProperty.cs" />
+    <Compile Include="AVM1\Instructions\ActionGetTime.cs" />
+    <Compile Include="AVM1\Instructions\ActionGetURL.cs" />
+    <Compile Include="AVM1\Instructions\ActionGetURL2.cs" />
+    <Compile Include="AVM1\Instructions\ActionGetVariable.cs" />
+    <Compile Include="AVM1\Instructions\ActionGotoFrame.cs" />
+    <Compile Include="AVM1\Instructions\ActionGotoFrame2.cs" />
+    <Compile Include="AVM1\Instructions\ActionGoToLabel.cs" />
+    <Compile Include="AVM1\Instructions\ActionGreater.cs" />
+    <Compile Include="AVM1\Instructions\ActionIf.cs" />
+    <Compile Include="AVM1\Instructions\ActionImplementsOp.cs" />
+    <Compile Include="AVM1\Instructions\ActionIncrement.cs" />
+    <Compile Include="AVM1\Instructions\ActionInitArray.cs" />
+    <Compile Include="AVM1\Instructions\ActionInitObject.cs" />
+    <Compile Include="AVM1\Instructions\ActionInstanceOf.cs" />
+    <Compile Include="AVM1\Instructions\ActionJump.cs" />
+    <Compile Include="AVM1\Instructions\ActionLess.cs" />
+    <Compile Include="AVM1\Instructions\ActionLess2.cs" />
+    <Compile Include="AVM1\Instructions\ActionMBAsciiToChar.cs" />
+    <Compile Include="AVM1\Instructions\ActionMBCharToAscii.cs" />
+    <Compile Include="AVM1\Instructions\ActionMBStringExtract.cs" />
+    <Compile Include="AVM1\Instructions\ActionMBStringLength.cs" />
+    <Compile Include="AVM1\Instructions\ActionModulo.cs" />
+    <Compile Include="AVM1\Instructions\ActionMultiply.cs" />
+    <Compile Include="AVM1\Instructions\ActionNewMethod.cs" />
+    <Compile Include="AVM1\Instructions\ActionNewObject.cs" />
+    <Compile Include="AVM1\Instructions\ActionNextFrame.cs" />
+    <Compile Include="AVM1\Instructions\ActionNot.cs" />
+    <Compile Include="AVM1\Instructions\ActionOr.cs" />
+    <Compile Include="AVM1\Instructions\ActionPlay.cs" />
+    <Compile Include="AVM1\Instructions\ActionPop.cs" />
+    <Compile Include="AVM1\Instructions\ActionPreviousFrame.cs" />
+    <Compile Include="AVM1\Instructions\ActionPush.cs" />
+    <Compile Include="AVM1\Instructions\ActionPushDuplicate.cs" />
+    <Compile Include="AVM1\Instructions\ActionRandomNumber.cs" />
+    <Compile Include="AVM1\Instructions\ActionRemoveSprite.cs" />
+    <Compile Include="AVM1\Instructions\ActionReturn.cs" />
+    <Compile Include="AVM1\Instructions\ActionSetMember.cs" />
+    <Compile Include="AVM1\Instructions\ActionSetProperty.cs" />
+    <Compile Include="AVM1\Instructions\ActionSetTarget.cs" />
+    <Compile Include="AVM1\Instructions\ActionSetTarget2.cs" />
+    <Compile Include="AVM1\Instructions\ActionSetVariable.cs" />
+    <Compile Include="AVM1\Instructions\ActionStackSwap.cs" />
+    <Compile Include="AVM1\Instructions\ActionStartDrag.cs" />
+    <Compile Include="AVM1\Instructions\ActionStop.cs" />
+    <Compile Include="AVM1\Instructions\ActionStopSounds.cs" />
+    <Compile Include="AVM1\Instructions\ActionStoreRegister.cs" />
+    <Compile Include="AVM1\Instructions\ActionStrictEquals.cs" />
+    <Compile Include="AVM1\Instructions\ActionStringAdd.cs" />
+    <Compile Include="AVM1\Instructions\ActionStringEquals.cs" />
+    <Compile Include="AVM1\Instructions\ActionStringExtract.cs" />
+    <Compile Include="AVM1\Instructions\ActionStringGreater.cs" />
+    <Compile Include="AVM1\Instructions\ActionStringLength.cs" />
+    <Compile Include="AVM1\Instructions\ActionStringLess.cs" />
+    <Compile Include="AVM1\Instructions\ActionSubtract.cs" />
+    <Compile Include="AVM1\Instructions\ActionTargetPath.cs" />
+    <Compile Include="AVM1\Instructions\ActionThrow.cs" />
+    <Compile Include="AVM1\Instructions\ActionToggleQuality.cs" />
+    <Compile Include="AVM1\Instructions\ActionToInteger.cs" />
+    <Compile Include="AVM1\Instructions\ActionToNumber.cs" />
+    <Compile Include="AVM1\Instructions\ActionToString.cs" />
+    <Compile Include="AVM1\Instructions\ActionTrace.cs" />
+    <Compile Include="AVM1\Instructions\ActionTry.cs" />
+    <Compile Include="AVM1\Instructions\ActionTypeOf.cs" />
+    <Compile Include="AVM1\Instructions\ActionWaitForFrame.cs" />
+    <Compile Include="AVM1\Instructions\ActionWaitForFrame2.cs" />
+    <Compile Include="AVM1\Instructions\ActionWith.cs" />
+    <Compile Include="AVM1\Stack\AVM1Stack.cs" />
+    <Compile Include="AVM1\Stack\StackChange.cs" />
+    <Compile Include="AVM1\Stack\StackException.cs" />
+    <Compile Include="AVM1\Stack\StackPop.cs" />
+    <Compile Include="AVM1\Stack\StackPush.cs" />
+    <Compile Include="AVM1\Stack\Trace.cs" />
+    <Compile Include="AVM2\AbcFormatException.cs" />
+    <Compile Include="AVM2\AbcVerifierException.cs" />
+    <Compile Include="AVM2\ABC\AbcFile.cs" />
+    <Compile Include="AVM2\ABC\AbstractMultinameEntry.cs" />
+    <Compile Include="AVM2\ABC\Class_info.cs" />
+    <Compile Include="AVM2\ABC\Cpool_info.cs" />
+    <Compile Include="AVM2\ABC\Exception_info.cs" />
+    <Compile Include="AVM2\ABC\Instance_info.cs" />
+    <Compile Include="AVM2\ABC\Metadata_info.cs" />
+    <Compile Include="AVM2\ABC\Metadata_item_info.cs" />
+    <Compile Include="AVM2\ABC\Method_body_info.cs" />
+    <Compile Include="AVM2\ABC\Method_info.cs" />
+    <Compile Include="AVM2\ABC\Multiname0x1D.cs" />
+    <Compile Include="AVM2\ABC\MultinameMultiname.cs" />
+    <Compile Include="AVM2\ABC\MultinameMultinameL.cs" />
+    <Compile Include="AVM2\ABC\MultinameQname.cs" />
+    <Compile Include="AVM2\ABC\MultinameRTQname.cs" />
+    <Compile Include="AVM2\ABC\MultinameRTQnameL.cs" />
+    <Compile Include="AVM2\ABC\Namespace_info.cs" />
+    <Compile Include="AVM2\ABC\Ns_set_info.cs" />
+    <Compile Include="AVM2\ABC\Option_detail.cs" />
+    <Compile Include="AVM2\ABC\Script_info.cs" />
+    <Compile Include="AVM2\ABC\Traits_info.cs" />
+    <Compile Include="AVM2\AbstractInstruction.cs" />
+    <Compile Include="AVM2\AVM2Argument.cs" />
+    <Compile Include="AVM2\AVM2Code.cs" />
+    <Compile Include="AVM2\AVM2Factory.cs" />
+    <Compile Include="AVM2\AVM2OpCodes.cs" />
+    <Compile Include="AVM2\AVM2Method.cs" />
+    <Compile Include="AVM2\Instructions\OP_abs_jump.cs" />
+    <Compile Include="AVM2\Instructions\OP_add.cs" />
+    <Compile Include="AVM2\Instructions\OP_add_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_applytype.cs" />
+    <Compile Include="AVM2\Instructions\OP_astype.cs" />
+    <Compile Include="AVM2\Instructions\OP_astypelate.cs" />
+    <Compile Include="AVM2\Instructions\OP_bitand.cs" />
+    <Compile Include="AVM2\Instructions\OP_bitnot.cs" />
+    <Compile Include="AVM2\Instructions\OP_bitor.cs" />
+    <Compile Include="AVM2\Instructions\OP_bitxor.cs" />
+    <Compile Include="AVM2\Instructions\OP_call.cs" />
+    <Compile Include="AVM2\Instructions\OP_callinterface.cs" />
+    <Compile Include="AVM2\Instructions\OP_callmethod.cs" />
+    <Compile Include="AVM2\Instructions\OP_callproperty.cs" />
+    <Compile Include="AVM2\Instructions\OP_callproplex.cs" />
+    <Compile Include="AVM2\Instructions\OP_callpropvoid.cs" />
+    <Compile Include="AVM2\Instructions\OP_callstatic.cs" />
+    <Compile Include="AVM2\Instructions\OP_callsuper.cs" />
+    <Compile Include="AVM2\Instructions\OP_callsuperid.cs" />
+    <Compile Include="AVM2\Instructions\OP_callsupervoid.cs" />
+    <Compile Include="AVM2\Instructions\OP_checkfilter.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_a.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_b.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_d.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_o.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_s.cs" />
+    <Compile Include="AVM2\Instructions\OP_coerce_u.cs" />
+    <Compile Include="AVM2\Instructions\OP_construct.cs" />
+    <Compile Include="AVM2\Instructions\OP_constructprop.cs" />
+    <Compile Include="AVM2\Instructions\OP_constructsuper.cs" />
+    <Compile Include="AVM2\Instructions\OP_convert_b.cs" />
+    <Compile Include="AVM2\Instructions\OP_convert_d.cs" />
+    <Compile Include="AVM2\Instructions\OP_convert_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_convert_o.cs" />
+    <Compile Include="AVM2\Instructions\OP_convert_s.cs" />
+    <Compile Include="AVM2\Instructions\OP_convert_u.cs" />
+    <Compile Include="AVM2\Instructions\OP_debug.cs" />
+    <Compile Include="AVM2\Instructions\OP_debugfile.cs" />
+    <Compile Include="AVM2\Instructions\OP_debugline.cs" />
+    <Compile Include="AVM2\Instructions\OP_declocal.cs" />
+    <Compile Include="AVM2\Instructions\OP_declocal_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_decrement.cs" />
+    <Compile Include="AVM2\Instructions\OP_decrement_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_deleteproperty.cs" />
+    <Compile Include="AVM2\Instructions\OP_divide.cs" />
+    <Compile Include="AVM2\Instructions\OP_dup.cs" />
+    <Compile Include="AVM2\Instructions\OP_dxns.cs" />
+    <Compile Include="AVM2\Instructions\OP_dxnslate.cs" />
+    <Compile Include="AVM2\Instructions\OP_equals.cs" />
+    <Compile Include="AVM2\Instructions\OP_esc_xattr.cs" />
+    <Compile Include="AVM2\Instructions\OP_esc_xelem.cs" />
+    <Compile Include="AVM2\Instructions\OP_finddef.cs" />
+    <Compile Include="AVM2\Instructions\OP_findproperty.cs" />
+    <Compile Include="AVM2\Instructions\OP_findpropstrict.cs" />
+    <Compile Include="AVM2\Instructions\OP_getdescendants.cs" />
+    <Compile Include="AVM2\Instructions\OP_getglobalscope.cs" />
+    <Compile Include="AVM2\Instructions\OP_getglobalslot.cs" />
+    <Compile Include="AVM2\Instructions\OP_getlex.cs" />
+    <Compile Include="AVM2\Instructions\OP_getlocal.cs" />
+    <Compile Include="AVM2\Instructions\OP_getlocal0.cs" />
+    <Compile Include="AVM2\Instructions\OP_getlocal1.cs" />
+    <Compile Include="AVM2\Instructions\OP_getlocal2.cs" />
+    <Compile Include="AVM2\Instructions\OP_getlocal3.cs" />
+    <Compile Include="AVM2\Instructions\OP_getouterscope.cs" />
+    <Compile Include="AVM2\Instructions\OP_getproperty.cs" />
+    <Compile Include="AVM2\Instructions\OP_getscopeobject.cs" />
+    <Compile Include="AVM2\Instructions\OP_getslot.cs" />
+    <Compile Include="AVM2\Instructions\OP_getsuper.cs" />
+    <Compile Include="AVM2\Instructions\OP_greaterequals.cs" />
+    <Compile Include="AVM2\Instructions\OP_greaterthan.cs" />
+    <Compile Include="AVM2\Instructions\OP_hasnext.cs" />
+    <Compile Include="AVM2\Instructions\OP_hasnext2.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifeq.cs" />
+    <Compile Include="AVM2\Instructions\OP_iffalse.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifge.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifgt.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifle.cs" />
+    <Compile Include="AVM2\Instructions\OP_iflt.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifne.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifnge.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifngt.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifnle.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifnlt.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifstricteq.cs" />
+    <Compile Include="AVM2\Instructions\OP_ifstrictne.cs" />
+    <Compile Include="AVM2\Instructions\OP_iftrue.cs" />
+    <Compile Include="AVM2\Instructions\OP_in.cs" />
+    <Compile Include="AVM2\Instructions\OP_inclocal.cs" />
+    <Compile Include="AVM2\Instructions\OP_inclocal_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_increment.cs" />
+    <Compile Include="AVM2\Instructions\OP_increment_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_initproperty.cs" />
+    <Compile Include="AVM2\Instructions\OP_instanceof.cs" />
+    <Compile Include="AVM2\Instructions\OP_istype.cs" />
+    <Compile Include="AVM2\Instructions\OP_istypelate.cs" />
+    <Compile Include="AVM2\Instructions\OP_jump.cs" />
+    <Compile Include="AVM2\Instructions\OP_kill.cs" />
+    <Compile Include="AVM2\Instructions\OP_label.cs" />
+    <Compile Include="AVM2\Instructions\OP_lessequals.cs" />
+    <Compile Include="AVM2\Instructions\OP_lessthan.cs" />
+    <Compile Include="AVM2\Instructions\OP_lf32.cs" />
+    <Compile Include="AVM2\Instructions\OP_lf64.cs" />
+    <Compile Include="AVM2\Instructions\OP_li16.cs" />
+    <Compile Include="AVM2\Instructions\OP_li32.cs" />
+    <Compile Include="AVM2\Instructions\OP_li8.cs" />
+    <Compile Include="AVM2\Instructions\OP_lookupswitch.cs" />
+    <Compile Include="AVM2\Instructions\OP_lshift.cs" />
+    <Compile Include="AVM2\Instructions\OP_modulo.cs" />
+    <Compile Include="AVM2\Instructions\OP_multiply.cs" />
+    <Compile Include="AVM2\Instructions\OP_multiply_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_negate.cs" />
+    <Compile Include="AVM2\Instructions\OP_negate_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_newactivation.cs" />
+    <Compile Include="AVM2\Instructions\OP_newarray.cs" />
+    <Compile Include="AVM2\Instructions\OP_newcatch.cs" />
+    <Compile Include="AVM2\Instructions\OP_newclass.cs" />
+    <Compile Include="AVM2\Instructions\OP_newfunction.cs" />
+    <Compile Include="AVM2\Instructions\OP_newobject.cs" />
+    <Compile Include="AVM2\Instructions\OP_nextname.cs" />
+    <Compile Include="AVM2\Instructions\OP_nextvalue.cs" />
+    <Compile Include="AVM2\Instructions\OP_nop.cs" />
+    <Compile Include="AVM2\Instructions\OP_not.cs" />
+    <Compile Include="AVM2\Instructions\OP_pop.cs" />
+    <Compile Include="AVM2\Instructions\OP_popscope.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushbyte.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushdouble.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushfalse.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushint.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushnamespace.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushnan.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushnull.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushscope.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushshort.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushstring.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushtrue.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushuint.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushundefined.cs" />
+    <Compile Include="AVM2\Instructions\OP_pushwith.cs" />
+    <Compile Include="AVM2\Instructions\OP_returnvalue.cs" />
+    <Compile Include="AVM2\Instructions\OP_returnvoid.cs" />
+    <Compile Include="AVM2\Instructions\OP_rshift.cs" />
+    <Compile Include="AVM2\Instructions\OP_setglobalslot.cs" />
+    <Compile Include="AVM2\Instructions\OP_setlocal.cs" />
+    <Compile Include="AVM2\Instructions\OP_setlocal0.cs" />
+    <Compile Include="AVM2\Instructions\OP_setlocal1.cs" />
+    <Compile Include="AVM2\Instructions\OP_setlocal2.cs" />
+    <Compile Include="AVM2\Instructions\OP_setlocal3.cs" />
+    <Compile Include="AVM2\Instructions\OP_setproperty.cs" />
+    <Compile Include="AVM2\Instructions\OP_setslot.cs" />
+    <Compile Include="AVM2\Instructions\OP_setsuper.cs" />
+    <Compile Include="AVM2\Instructions\OP_sf32.cs" />
+    <Compile Include="AVM2\Instructions\OP_sf64.cs" />
+    <Compile Include="AVM2\Instructions\OP_si16.cs" />
+    <Compile Include="AVM2\Instructions\OP_si32.cs" />
+    <Compile Include="AVM2\Instructions\OP_si8.cs" />
+    <Compile Include="AVM2\Instructions\OP_strictequals.cs" />
+    <Compile Include="AVM2\Instructions\OP_subtract.cs" />
+    <Compile Include="AVM2\Instructions\OP_subtract_i.cs" />
+    <Compile Include="AVM2\Instructions\OP_swap.cs" />
+    <Compile Include="AVM2\Instructions\OP_sxi1.cs" />
+    <Compile Include="AVM2\Instructions\OP_sxi16.cs" />
+    <Compile Include="AVM2\Instructions\OP_sxi8.cs" />
+    <Compile Include="AVM2\Instructions\OP_throw.cs" />
+    <Compile Include="AVM2\Instructions\OP_typeof.cs" />
+    <Compile Include="AVM2\Instructions\OP_urshift.cs" />
+    <Compile Include="AVM2\Static\StringInfo.cs" />
+    <Compile Include="AVM2\Static\VariableLengthInteger.cs" />
+    <Compile Include="BaseFile.cs" />
+    <Compile Include="BinaryReader2.cs" />
+    <Compile Include="BitmapData.cs" />
+    <Compile Include="BitmapMatrix.cs" />
+    <Compile Include="BitStream.cs" />
+    <Compile Include="ButtonCondAction.cs" />
+    <Compile Include="ButtonRecord.cs" />
+    <Compile Include="ButtonRecord2.cs" />
+    <Compile Include="Helper\ISWFCharacter.cs" />
+    <Compile Include="Helper\SwfEncodedU32.cs" />
+    <Compile Include="ClipActionRecord.cs" />
+    <Compile Include="ClipActions.cs" />
+    <Compile Include="ClipEventFlags.cs" />
+    <Compile Include="ColorMapData.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="CurvedEdgeRecord.cs" />
+    <Compile Include="CwsFile.cs" />
+    <Compile Include="CxFormWithAlpha.cs" />
+    <Compile Include="EndShapeRecord.cs" />
+    <Compile Include="FillStyle.cs" />
+    <Compile Include="FillStyleArray.cs" />
+    <Compile Include="FilterList.cs" />
+    <Compile Include="Filter\AbstractFilter.cs" />
+    <Compile Include="Filter\BevelFilter.cs" />
+    <Compile Include="Filter\BlurFilter.cs" />
+    <Compile Include="Filter\ColorMatrixFilter.cs" />
+    <Compile Include="Filter\ConvolutionFilter.cs" />
+    <Compile Include="Filter\DropShadowFilter.cs" />
+    <Compile Include="Filter\GlowFilter.cs" />
+    <Compile Include="Filter\GradientBevelFilter.cs" />
+    <Compile Include="Filter\GradientGlowFilter.cs" />
+    <Compile Include="Flowgraph\AVM1BasicBlock.cs" />
+    <Compile Include="Flowgraph\AVM1Flow.cs" />
+    <Compile Include="Flowgraph\BasicBlock.cs" />
+    <Compile Include="Flowgraph\Edge.cs" />
+    <Compile Include="FocalGradient.cs" />
+    <Compile Include="FrameHeaderInfo.cs" />
+    <Compile Include="FwsFile.cs" />
+    <Compile Include="GlyphEntry.cs" />
+    <Compile Include="Gradient.cs" />
+    <Compile Include="GradRecord.cs" />
+    <Compile Include="Helper\AbstractSwfElement.cs" />
+    <Compile Include="Helper\SwfCodeReader.cs" />
+    <Compile Include="Helper\SwfStrings.cs" />
+    <Compile Include="Interfaces\ISwfElement.cs" />
+    <Compile Include="KerningRecord.cs" />
+    <Compile Include="LineStyle.cs" />
+    <Compile Include="LineStyle2.cs" />
+    <Compile Include="LineStyleArray.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Matrix.cs" />
+    <Compile Include="MorphFillStyle.cs" />
+    <Compile Include="MorphFillStyleArray.cs" />
+    <Compile Include="MorphGradient.cs" />
+    <Compile Include="MorphGradRecord.cs" />
+    <Compile Include="MorphLineStyle.cs" />
+    <Compile Include="MorphLineStyle2.cs" />
+    <Compile Include="MorphLineStyleArray.cs" />
+    <Compile Include="Mp3Frame.cs" />
+    <Compile Include="Nellymoser16SoundData.cs" />
+    <Compile Include="Nellymoser8SoundData.cs" />
+    <Compile Include="NellymoserSoundData.cs" />
+    <Compile Include="Pix.cs" />
+    <Compile Include="Pix15.cs" />
+    <Compile Include="Pix24.cs" />
+    <Compile Include="RawSoundData.cs" />
+    <Compile Include="Rect.cs" />
+    <Compile Include="Rgb.cs" />
+    <Compile Include="Rgba.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="ShapeRecord.cs" />
+    <Compile Include="ShapeWithStyle.cs" />
+    <Compile Include="StraightEdgeRecord.cs" />
+    <Compile Include="Style.cs" />
+    <Compile Include="StyleChangeRecord.cs" />
+    <Compile Include="SwfEvents.cs" />
+    <Compile Include="SwfFile.cs" />
+    <Compile Include="SwfFormatException.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="TagHandlerFactory.cs" />
+    <Compile Include="SoundData.cs" />
+    <Compile Include="TagHandler\AbstractTagCodeHandler.cs" />
+    <Compile Include="TagHandler\AbstractTagHandler.cs" />
+    <Compile Include="CxForm.cs" />
+    <Compile Include="TagHandler\DefineBinaryData.cs" />
+    <Compile Include="TagHandler\DefineButtonSound.cs" />
+    <Compile Include="TagHandler\DefineSceneAndFrameLabelData.cs" />
+    <Compile Include="TagHandler\DefineScalingGrid.cs" />
+    <Compile Include="TagHandler\DefineSprite.cs" />
+    <Compile Include="TagHandler\Metadata.cs" />
+    <Compile Include="Mp3SoundData.cs" />
+    <Compile Include="TagHandler\PlaceObject.cs" />
+    <Compile Include="TagHandler\PlaceObject3.cs" />
+    <Compile Include="TagHandler\SymbolClass.cs" />
+    <Compile Include="TagHandler\ImportAssets2.cs" />
+    <Compile Include="TagHandler\SetTabIndex.cs" />
+    <Compile Include="TagHandler\ScriptLimits.cs" />
+    <Compile Include="TagHandler\EnableDebugger2.cs" />
+    <Compile Include="TagHandler\EnableDebugger.cs" />
+    <Compile Include="TagHandler\ImportAssets.cs" />
+    <Compile Include="TagHandler\ExportAssets.cs" />
+    <Compile Include="TagHandler\Protect.cs" />
+    <Compile Include="TagHandler\End.cs" />
+    <Compile Include="TagHandler\FrameLabel.cs" />
+    <Compile Include="TagHandler\SetBackgroundColor.cs" />
+    <Compile Include="TagHandler\DefineFontInfo2.cs" />
+    <Compile Include="TagHandler\DefineVideoStream.cs" />
+    <Compile Include="TagHandler\SoundStreamHead2.cs" />
+    <Compile Include="TagHandler\SoundStreamBlock.cs" />
+    <Compile Include="TagHandler\SoundStreamHead.cs" />
+    <Compile Include="SoundInfo.cs" />
+    <Compile Include="TagHandler\DefineSound.cs" />
+    <Compile Include="TagHandler\CsmTextSettings.cs" />
+    <Compile Include="TagHandler\DebugID.cs" />
+    <Compile Include="TagHandler\DefineBits.cs" />
+    <Compile Include="TagHandler\DefineBitsJPEG2.cs" />
+    <Compile Include="TagHandler\DefineBitsJPEG3.cs" />
+    <Compile Include="TagHandler\DefineBitsLossless.cs" />
+    <Compile Include="TagHandler\DefineBitsLossless2.cs" />
+    <Compile Include="TagHandler\DefineButton.cs" />
+    <Compile Include="TagHandler\DefineButton2.cs" />
+    <Compile Include="TagHandler\DefineEditText.cs" />
+    <Compile Include="TagHandler\DefineFont.cs" />
+    <Compile Include="TagHandler\DefineFont2.cs" />
+    <Compile Include="TagHandler\DefineFont3.cs" />
+    <Compile Include="TagHandler\DefineFont4.cs" />
+    <Compile Include="TagHandler\DefineFontAlignZones.cs" />
+    <Compile Include="TagHandler\DefineFontInfo.cs" />
+    <Compile Include="TagHandler\DefineFontName.cs" />
+    <Compile Include="TagHandler\DefineMorphShape.cs" />
+    <Compile Include="TagHandler\DefineMorphShape2.cs" />
+    <Compile Include="TagHandler\DefineShape.cs" />
+    <Compile Include="TagHandler\DefineShape4.cs" />
+    <Compile Include="TagHandler\DefineText.cs" />
+    <Compile Include="TagHandler\DoABC.cs" />
+    <Compile Include="TagHandler\DoAction.cs" />
+    <Compile Include="TagHandler\DoInitAction.cs" />
+    <Compile Include="TagHandler\FileAttributes.cs" />
+    <Compile Include="FontData.cs" />
+    <Compile Include="TagHandler\GenericTag.cs" />
+    <Compile Include="TagHandler\JPEGTables.cs" />
+    <Compile Include="TagHandler\PlaceObject2.cs" />
+    <Compile Include="TagHandler\ProductID.cs" />
+    <Compile Include="TagHandler\StartSound.cs" />
+    <Compile Include="TagHandler\StartSound2.cs" />
+    <Compile Include="TagHandler\UndocumentedTag.cs" />
+    <Compile Include="TagHandler\VideoFrame.cs" />
+    <Compile Include="TextRecord.cs" />
+    <Compile Include="Types.cs" />
+    <Compile Include="ZoneData.cs" />
+    <Compile Include="ZoneRecord.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdParty\SharpZipLib\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\configschema.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Configuration\SWF.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

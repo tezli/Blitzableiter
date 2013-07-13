@@ -1,0 +1,45 @@
+﻿body
+{
+    margin: 0px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 12px;
+    background-color: Black;
+    color: #fff;
+}
+
+table
+{
+    border: none;
+    background-color: transparent;
+}
+
+td
+{
+    margin: 2px;
+    padding: 5px;
+    border: none;
+    background-color: #888;
+}
+
+h1
+{
+    color: #000;
+}
+
+a
+{
+    color: #fff;
+}
+a:hover
+{
+    color: #fff;
+}
+a:visited
+{
+    color: #fff;
+}
+a:active
+{
+    color: #fff;
+}
