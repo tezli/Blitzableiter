@@ -21,3 +21,8 @@ It produces a non-malicious Flash file as output by verifying the inter-Tag cons
 Wellformed input files produce functionally equivalent output files.
 
 For more information read this this [presentation](http://www.recurity-labs.com/content/pub/FX_Blitzableiter_BHUSA2010.pdf "PDF") from BlackHat USA 2010
+
+Licensing
+---------
+
+The SWF Library is Open Source under GPLv3. For other parts of the project other license models may apply.
