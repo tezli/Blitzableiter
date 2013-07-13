@@ -26,3 +26,4 @@ Licensing
 ---------
 
 The SWF Library is Open Source under GPLv3. For other parts of the project other license models may apply.
+Contact Felix Lindner at Recurity Labs GmbH to obtain a license that fit your needs.
